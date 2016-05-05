@@ -237,7 +237,7 @@ else {
                             <div class="caption-right">
                                 <h3 class="fsz-40 blk-clr funky-font-2">  Advanced Group Marketing  </h3>
                                 <h2> <span class="blu-clr">The best DEALS! <span class="blk-clr">All together we win</span></h2>
-                                <p class="hidden-xs"><span class="org-clr">Quantity of customers can change the price of your deal, so here All together can get the best DEALS</p>
+                                <p class="hidden-xs"><span class="blu-clr">Quantity of customers can change the price of your deal, so here All together can get the best DEALS</p>
                                 <a class="fancy-btn-alt fsz-16" href="index2.php?cat_url_id=6">More</a>
                             </div>
                         </div>
@@ -297,7 +297,7 @@ else {
                             <div>
                                 <div class="vertical-align-text">
                                     
-                                    <a href="index2.php?cat_url_id=2" class="fancy-btn fancy-btn-small">Shop Now</a>
+                                     <a href="index2.php?cat_url_id=2" class="fancy-btn fancy-btn-small">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -429,7 +429,7 @@ else {
 			 <section class="gst-row row-bikes clear"> 
                 <div class="products-wrap text-center">
                     <div class="fancy-heading text-center">
-                        <h3>Choose Your <span class="thm-clr"> Food PRODUCT</span></h3>
+                        <h3>Choose Your <span class="thm-clr"> Food Product</span></h3>
                         <h5 class="funky-font-2">The Ultimate Deals with exciting Price </h5>
                         <i class="thm-clr fsz-20 fa fa-angle-double-down"></i>
                     </div>
@@ -505,7 +505,7 @@ else {
 
                 <div class="gst-column col-lg-6 col-md-6 col-sm-12 col-xs-12 gst-compare-women">
                     <div class="col-lg-7">
-                        <h5 class="title-2">IPHONE 6 SE</h5>
+                        <h5 class="title-2">SONY XPERIA</h5>
 
                         <h3>                                         
                             <span class="sec-title fsz-45"> Mobiles </span>
@@ -513,9 +513,9 @@ else {
                         </h3>
 
                         <ul>
-                            <li>New 12-megapixel iSight camera </li>
-                            <li>A8 chip with 124-bit architecture</li>
-                            <li>M10 motion coprocessor included</li>
+                            <li>13MP Front and Rear Cameras with Flash </li>
+                            <li>1.7 GHz Octa-Core Processor</li>
+                            <li>16GB Storage Capacity + 2GB of RAM</li>
                         </ul>
 
                         <p class="gst-compare-actions">

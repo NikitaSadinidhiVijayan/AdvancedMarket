@@ -498,8 +498,8 @@ if($_POST) {
                                             }
                                             else if (strtolower($_SESSION["utype"]) == "seller") {
                                                 echo"<div class='col-md-10 col-sm-12 col-sm-12 text-right'>";
-                                                echo "
-                                                    Seller can not join a deal. Please log in as a buyer.
+                                                echo "<i>Seller can not join a deal.<br/></i> ";
+												echo "<i>Please log in as a buyer.</i>
                                                 ";
                                                 echo "</div>";
                                             }
@@ -553,9 +553,9 @@ if($_POST) {
                                     Minimum order quantity: <?php echo $global_min_quantity ?> <?php echo $var_deal_unit ?>
                                 </p>
                                 <p>
-                                <table class="table table-bordered table-hover">
+                                <table class="table table-bordered table-hover table-condensed">
                                     <thead>
-                                    <tr>
+                                    <tr class="info">
                                         <th>Quantity Range</th>
                                         <th>Price per unit</th>
                                         <th>Status</th>
@@ -577,36 +577,33 @@ if($_POST) {
                                         // Set status
                                         if ($global_order_quantity_sum < $var_number_discount_1) {
                                             $var_status_1 = $var_status_progress;
-                                        }
-                                        else if ($var_number_discount_1 <= $global_order_quantity_sum) {
-                                            $var_status_1 = $var_status_done;
-                                        }
-                                        // Display row
-                                        echo "
-                                            <tr>
+											echo "
+                                            <tr >
                                                 <td> 1 - ".$var_number_discount_1. "</td>
                                                 <td> $".$var_amount_discount_1." </td>
                                                 <td> ".$var_status_1. "</td>
                                             </tr>
                                         ";
+                                        }
+                                        else if ($var_number_discount_1 <= $global_order_quantity_sum) {
+                                            $var_status_1 = $var_status_done;
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        // Display row
+                                        
                                     }
                                     else if ($var_number_discount_option == 2) {
                                         // Set status
                                         if ($global_order_quantity_sum <= $var_number_discount_1) {
                                             $var_status_1 = $var_status_progress;
                                             $var_status_2 = "";
-                                        }
-                                        else if (($var_number_discount_1 < $global_order_quantity_sum) &&
-                                            ($global_order_quantity_sum < $var_number_discount_2)) {
-                                            $var_status_1 = $var_status_done;
-                                            $var_status_2 = $var_status_progress;
-                                        }
-                                        else if ($var_number_discount_2 <= $global_order_quantity_sum) {
-                                            $var_status_1 = $var_status_done;
-                                            $var_status_2 = $var_status_done;
-                                        }
-                                        // Display row
-                                        echo "
+											echo "
                                             <tr>
                                                 <td> 1 - ".$var_number_discount_1. "</td>
                                                 <td> $".$var_amount_discount_1." </td>
@@ -618,6 +615,42 @@ if($_POST) {
                                                 <td> ".$var_status_2. "</td>
                                             </tr>
                                         ";
+                                        }
+                                        else if (($var_number_discount_1 < $global_order_quantity_sum) &&
+                                            ($global_order_quantity_sum < $var_number_discount_2)) {
+                                            $var_status_1 = $var_status_done;
+                                            $var_status_2 = $var_status_progress;
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                            <tr>
+                                                <td> ".($var_number_discount_1+1)." - ".$var_number_discount_2. "</td>
+                                                <td> $".$var_amount_discount_2." </td>
+                                                <td> ".$var_status_2. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        else if ($var_number_discount_2 <= $global_order_quantity_sum) {
+                                            $var_status_1 = $var_status_done;
+                                            $var_status_2 = $var_status_done;
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                            <tr class='success'>
+                                                <td> ".($var_number_discount_1+1)." - ".$var_number_discount_2. "</td>
+                                                <td> $".$var_amount_discount_2." </td>
+                                                <td> ".$var_status_2. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        // Display row
+                                        
                                     }
                                     else if ($var_number_discount_option == 3) {
                                         // Set status
@@ -625,26 +658,7 @@ if($_POST) {
                                             $var_status_1 = $var_status_progress;
                                             $var_status_2 = "";
                                             $var_status_3 = "";
-                                        }
-                                        else if (($var_number_discount_1 < $global_order_quantity_sum) &&
-                                            ($global_order_quantity_sum <= $var_number_discount_2)) {
-                                            $var_status_1 = $var_status_done;
-                                            $var_status_2 = $var_status_progress;
-                                            $var_status_3 = "";
-                                        }
-                                        else if (($var_number_discount_2 < $global_order_quantity_sum) &&
-                                            ($global_order_quantity_sum < $var_number_discount_3)) {
-                                            $var_status_1 = $var_status_done;
-                                            $var_status_2 = $var_status_done;
-                                            $var_status_3 = $var_status_progress;
-                                        }
-                                        else if ($var_number_discount_3 <= $global_order_quantity_sum) {
-                                            $var_status_1 = $var_status_done;
-                                            $var_status_2 = $var_status_done;
-                                            $var_status_3 = $var_status_done;
-                                        }
-                                        // Display row
-                                        echo "
+											echo "
                                             <tr>
                                                 <td> 1 - ".$var_number_discount_1. "</td>
                                                 <td> $".$var_amount_discount_1." </td>
@@ -661,6 +675,79 @@ if($_POST) {
                                                 <td> ".$var_status_3. "</td>
                                             </tr>
                                         ";
+                                        }
+                                        else if (($var_number_discount_1 < $global_order_quantity_sum) &&
+                                            ($global_order_quantity_sum <= $var_number_discount_2)) {
+                                            $var_status_1 = $var_status_done;
+                                            $var_status_2 = $var_status_progress;
+                                            $var_status_3 = "";
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                            <tr>
+                                                <td> ".($var_number_discount_1+1)." - ".$var_number_discount_2. "</td>
+                                                <td> $".$var_amount_discount_2." </td>
+                                                <td> ".$var_status_2. "</td>
+                                            </tr>
+                                            <tr>
+                                                <td> ".($var_number_discount_2+1)." - ".$var_number_discount_3. "</td>
+                                                <td> $".$var_amount_discount_3." </td>
+                                                <td> ".$var_status_3. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        else if (($var_number_discount_2 < $global_order_quantity_sum) &&
+                                            ($global_order_quantity_sum < $var_number_discount_3)) {
+                                            $var_status_1 = $var_status_done;
+                                            $var_status_2 = $var_status_done;
+                                            $var_status_3 = $var_status_progress;
+											
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                            <tr class='success'>
+                                                <td> ".($var_number_discount_1+1)." - ".$var_number_discount_2. "</td>
+                                                <td> $".$var_amount_discount_2." </td>
+                                                <td> ".$var_status_2. "</td>
+                                            </tr>
+                                            <tr>
+                                                <td> ".($var_number_discount_2+1)." - ".$var_number_discount_3. "</td>
+                                                <td> $".$var_amount_discount_3." </td>
+                                                <td> ".$var_status_3. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        else if ($var_number_discount_3 <= $global_order_quantity_sum) {
+                                            $var_status_1 = $var_status_done;
+                                            $var_status_2 = $var_status_done;
+                                            $var_status_3 = $var_status_done;
+											
+											echo "
+                                            <tr class='success'>
+                                                <td> 1 - ".$var_number_discount_1. "</td>
+                                                <td> $".$var_amount_discount_1." </td>
+                                                <td> ".$var_status_1. "</td>
+                                            </tr>
+                                            <tr class='success'>
+                                                <td> ".($var_number_discount_1+1)." - ".$var_number_discount_2. "</td>
+                                                <td> $".$var_amount_discount_2." </td>
+                                                <td> ".$var_status_2. "</td>
+                                            </tr>
+                                            <tr class='success'>
+                                                <td> ".($var_number_discount_2+1)." - ".$var_number_discount_3. "</td>
+                                                <td> $".$var_amount_discount_3." </td>
+                                                <td> ".$var_status_3. "</td>
+                                            </tr>
+                                        ";
+                                        }
+                                        // Display row
+                                        
                                     }
 
                                     ?>
