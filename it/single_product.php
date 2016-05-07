@@ -972,13 +972,13 @@ if($_POST) {
 					$res2=mysqli_query($con,$sql2);
 					while($row2 = mysqli_fetch_assoc($res2))
 						{
-					   
+						$var_deal_id2=$row2["deal_id"];
 						echo"<div class='product'>";
 							echo "<div class='rel-prod-media'>";
 								echo"<img src='images/".$row2["deal_image"]."' />";                                                 
 							echo "</div>";
 							echo "<div class='product-content'>";
-								echo "<h3> <a href='#' class='title-3 fsz-16'>".$row2["title"]."</a> </h3>";
+								echo "<h3> <a href='single_product.php?deal_url_id=$var_deal_id2' class='title-3 fsz-16'>".$row2["title"]."</a> </h3>";
 								echo "<p class='font-3'>Price: <span class='thm-clr'> $".$row2["amount_discount_1"]." </span> </p>";   
 							echo "</div>";
 						echo"</div>";

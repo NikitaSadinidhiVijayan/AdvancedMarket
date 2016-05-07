@@ -337,24 +337,7 @@ else {
                                     </div>
                                 </div>
                             </div>
-							<div class="media clearfix">
-  
-                                <div class="media-body">
-                                    <header class="entry-header">
-                                        <!-- Post Title -->
-                                        <h3 class="entry-title" itemprop="headline">
-                                            <a href="index.php" rel="bookmark" itemprop="url">Q1. What is Advanced Group marketing and how does it work?</a>
-                                        </h3>
-                                    </header>
-
-                                    <!-- Main Content of the faq -->
-                                    <div class="entry-description" itemprop="description">
-                                        <p>Advanced Group Marketing is a platform for multiple buyers to come together and purchase items in bulk at comparatively lower prices from sellers. Sellers also get the benefit of selling the items in large quantity to multiple customers through a single deal. </p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+						</article>
 					</main>
 				
 		</div>

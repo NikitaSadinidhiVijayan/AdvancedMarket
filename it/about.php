@@ -244,8 +244,8 @@ else {
 							<div class="col-sm-8 about-info spcbt-30">
 								<ul class="about-contact">
 									<li> <i class="fa fa-map-marker fsz-20"></i> <span class="desc"> 1234 California State University Fullerton, California </span> </li>
-									<li> <i class="fa fa-envelope-o fsz-20"></i> <span class="desc"> hello@advancedgroupmarketing.com </span> </li>
-									<li> <i class="fa fa-phone fsz-20"></i> <span class="desc"> (0091) 8547 632521 </span> </li>
+									<li> <i class="fa fa-envelope-o fsz-20"></i> <span class="desc"> info@advancedgroupmarketing.com </span> </li>
+									<li> <i class="fa fa-phone fsz-20"></i> <span class="desc"> 915 123 2521 </span> </li>
 								</ul>
 								<p> <strong class="gray-color">HOUR WORK:</strong> <b>  MONDAY - FRIDAY  /  08AM - 05PM</b> </p>
 							</div>    

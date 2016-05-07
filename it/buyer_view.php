@@ -97,7 +97,7 @@ $user_key=$_SESSION["ukey"];
 					
 					<table class="table table-bordered table-hover">
 					<thead>
-					  <tr>
+					  <tr class='info'>
 						
 						<th>Title</th>
 						<th>Quantity</th>
@@ -155,12 +155,13 @@ $user_key=$_SESSION["ukey"];
         <div class="popup-box page-search-box">
             <div>
                 <div class="popup-box-inner">
-                    <form>
-                        <input class="search-query" type="text" placeholder="Search and hit enter" />
+                    <form method="get" action="search.php">
+                        <input class="search-query" name="user_query" type="text" placeholder="Search and hit enter" />
+						<input type = "submit" name= "search" value="search">
                     </form>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="close-popup-box close-page-search"><i class="fa fa-close"></i></a>
+            <a href="search.php" class="close-popup-box close-page-search"><i class="fa fa-close"></i></a>
         </div>
         <!-- / Search Popup -->
 

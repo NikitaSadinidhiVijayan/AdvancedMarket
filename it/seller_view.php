@@ -98,10 +98,10 @@ $user_key=$_SESSION["ukey"]
 					
 					<table class="table table-striped table-bordered table-hover table-condensed">
 					<thead>
-					  <tr>
+					  <tr class='info'>
 						
 						<th>Title</th>
-						<th>Description</th>
+						<!--<th>Description</th>-->
 						<th>Quantity 1</th>
 						<th>Price 1</th>
 						<th>Quantity 2</th>
@@ -131,7 +131,7 @@ $user_key=$_SESSION["ukey"]
 							$var_display_deal_price_3 = $var_row_display_deal['amount_discount_3'];
 							echo "<tr>
 							 <td> <a href= 'single_product.php?deal_url_id=$var_display_deal_id'> $var_display_deal_title </a></td>
-							 <td> $var_display_deal_description </td>
+							<!-- <td> $var_display_deal_description </td>-->
 							 <td> $var_display_deal_qty_1 </td>
 							 <td> $var_display_deal_price_1 </td>
 							 <td> $var_display_deal_qty_2 </td>
@@ -161,12 +161,13 @@ $user_key=$_SESSION["ukey"]
         <div class="popup-box page-search-box">
             <div>
                 <div class="popup-box-inner">
-                    <form>
-                        <input class="search-query" type="text" placeholder="Search and hit enter" />
+                    <form method="get" action="search.php">
+                        <input class="search-query" name="user_query" type="text" placeholder="Search and hit enter" />
+						<input type = "submit" name= "search" value="search">
                     </form>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="close-popup-box close-page-search"><i class="fa fa-close"></i></a>
+            <a href="search.php" class="close-popup-box close-page-search"><i class="fa fa-close"></i></a>
         </div>
         <!-- / Search Popup -->
 

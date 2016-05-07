@@ -827,7 +827,7 @@ if($_POST) {
             </section>
 			
         </div>                                                                                                                       
-<br>
+	</br>
         <div class="clear"></div>
 
  <!-- FOOTER -->
